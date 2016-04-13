@@ -27,43 +27,50 @@
   
   <body>
 		
+			<div id="color-overlay"></div>
+		
 		<div id="container">
 			
-			<div id="form-container">
-				<div class="color-overlay"></div>
-				
-				<div id="title">
-					<h1>Week 1 Assignment</h1>
-					<h2>Number Form</h2>
+		
+
+			<div id="title">
+				<h1>Week 1 Assignment</h1>
+				<h2>Number Form</h2>
+			</div>
+
+			<div id="form">
+				<div id="form-box">
+					<h3>Type a number and press submit</h3>
+
+					<form id="myForm">
+
+						<input type="text" id="userInput" placeholder="Type any number!">
+						<input type="button" onclick="addNumber()" value="Submit Number">
+						<input type="button" onclick="resetForm()" value="Reset" class="reset">
+
+					</form>
+
+					<p id="error"></p>
+
 				</div>
+			</div>
 
-				<div id="form">
-					<div id="form-box">
-						<h3>Type a number and press submit</h3>
 
-							<input type="text" id="userInput" placeholder="Type any number!">
-							<input type="button" onclick="addNumber()" value="Submit Number">
-							<input type="reset" value="Reset" class="reset">
-
-					</div>
-				</div>
-				
-
-				<div id="results-container">
-					<div id="results-box">
-						<h3>Your results</h3>
-						<ul>
+			<div id="results-container">
+				<div id="results-box">
+					<h3>Your results</h3>
+					<ul>
+						<div id="results">
 							<li>Total Numbers: <span id="total"></span></li>
 							<li>Sum of Numbers: <span id="sum"></span></li>
 							<li>Highest Number: <span id="max"></span></li>
 							<li>Average: <span id="avg"></span></li>
-						
-						
-						</ul>
-					</div>
+						</div>
+					</ul>
 				</div>
+			</div>
 				
-				</div>
+			
 		</div>
 		
 		<script src="js/main.js"></script>
