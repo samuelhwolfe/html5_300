@@ -1,8 +1,8 @@
 var numbers = [];
-
+var reset = "";
 
 function addNumber(){
-
+	
 	//variable that translates user input from text to integers
 	var integers = parseFloat(document.getElementById("userInput").value, 10);
 	
@@ -12,7 +12,6 @@ function addNumber(){
 	//resets the input text box
 	document.getElementById("userInput").value=''; 
 
-	
 	//calculates array length and outputs it to #total
 	document.getElementById("total").innerHTML = numbers.length; 
 
@@ -25,12 +24,10 @@ function addNumber(){
 	//output 'var sum' to #sum
 	document.getElementById("sum").innerHTML = sum;
 	
-	
 	var max = Math.max.apply(null, numbers);
 	
 	//output 'var max' to #max
 	document.getElementById("max").innerHTML = max;
-	
 	
 	var avg = sum / numbers.length
 	
@@ -39,11 +36,26 @@ function addNumber(){
 	
 	console.log(numbers);
 	console.log("reduce(): " + sum);
-	//console.log(Math.max.apply(null, numbers));
 	console.log(max);
 	console.log(avg);
-	
 }
+
+function resetForm(){
+	
+	var element = document.getElementById("total");
+	element.innerHTML = reset;
+	var element = document.getElementById("sum");
+	element.innerHTML = reset;
+	var element = document.getElementById("avg");
+	element.innerHTML = reset;
+	var element = document.getElementById("max");
+	element.innerHTML = reset;
+	
+	numbers.length = 0;
+	
+
+}
+
 
 
 
