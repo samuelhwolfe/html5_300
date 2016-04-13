@@ -40,10 +40,11 @@
 				<div id="form">
 					<div id="form-box">
 						<h3>Type a number and press submit</h3>
-							<form id="number-form" action="#" method="post">
-								<input id="" type="text" name="email address" placeholder="Type any number!">
-								<input id="submit-button" type="submit" value="Submit">
-							</form>
+
+							<input type="text" id="userInput" placeholder="Type any number!">
+							<input type="button" onclick="addNumber()" value="Submit Number">
+							<input type="reset" value="Reset" class="reset">
+
 					</div>
 				</div>
 				
@@ -52,9 +53,10 @@
 					<div id="results-box">
 						<h3>Your results</h3>
 						<ul>
-							<li>Total numbers entered</li>
-							<li>Sum of numbers entered</li>
-							<li>Average of all numbers entered</li>
+							<li>Total Numbers: <span id="total"></span></li>
+							<li>Highest Number: <span id="max"></span></li>
+							<li>Average: <span id="average"></span></li>
+						
 						
 						</ul>
 					</div>
