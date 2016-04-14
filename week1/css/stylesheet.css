@@ -108,6 +108,7 @@ html,body {
 
 #results-container ul {
 	font-size: 2vw;
+	margin-top: 2%;
 	font-weight: 100;
 	color: white;
 	list-style-type: none;
