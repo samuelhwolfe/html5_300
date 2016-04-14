@@ -13,6 +13,9 @@ html,body {
 }
 
 #container {
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	-webkit-flex-direction: column;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
