@@ -13,7 +13,7 @@ function addNumber(){
 	if ((isNaN(x)) || (x == null || x == "")) {
 		document.getElementById("userInput").value='';
 		document.getElementById("error").style.display = 'block';
-		document.getElementById("error").innerHTML = "Dude, that's not a number";
+		document.getElementById("error").innerHTML = "Dude seriously? That's not a number. Don't waste my time.";
 	}
 	
 	else {
