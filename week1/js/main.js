@@ -1,3 +1,7 @@
+//global variables numbers
+//numbers = user submitted array
+//reset = back to square zero
+
 var numbers = [];
 var reset = "";
 
@@ -5,17 +9,20 @@ function addNumber(){
 	
 	var x = document.getElementById("userInput").value;
 	
-	if (isNaN(x)) {
-		//alert("must be a number");
+	//if user submitted value is not a number or doesn't exist
+	if ((isNaN(x)) || (x == null || x == "")) {
 		document.getElementById("userInput").value='';
+		document.getElementById("error").style.display = 'block';
 		document.getElementById("error").innerHTML = "Dude, that's not a number";
 	}
 	
 	else {
 		
-		//clears the error message when a number is pressed
-
+		//clears the error message when a number is entered
 		document.getElementById("error").innerHTML = '';
+		
+		//sets #error back to display:none
+		document.getElementById("error").style.display = 'none';
 
 		//variable that translates user input from text to integers
 		var integers = parseFloat(document.getElementById("userInput").value, 10);
@@ -60,7 +67,13 @@ function addNumber(){
 
 function resetForm(){
 	
+	//clears error emssage when reset button is pressed
 	document.getElementById("error").innerHTML = '';
+	
+	//sets #error back to display:none
+	document.getElementById("error").style.display = 'none';
+	
+	//resets all values back to var reset
 	var element = document.getElementById("total");
 	element.innerHTML = reset;
 	var element = document.getElementById("sum");
@@ -70,6 +83,7 @@ function resetForm(){
 	var element = document.getElementById("max");
 	element.innerHTML = reset;
 	
+	//resets numbers array to zero values
 	numbers.length = 0;
 	
 }
