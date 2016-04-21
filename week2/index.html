@@ -11,42 +11,52 @@
 		
 		<title>WEEK 2 | Object List</title> 
    
-		<!-- CSS & Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic,500,500italic,100' rel='stylesheet' type='text/css'>
-		
+		<!-- Google Fonts -->
+  
     <link rel="stylesheet" href="css/stylesheet.css">
  
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
 	
 	<body>
 		
-		<div id="submit-button">
-			<input type="button" value="New Item">
+		<div id="newItem">
+			<input type="button" value="New Item" onclick="showForm()">
 		</div>
 		
 		<div id="module-1">
-			<table>
-				<tr>
-					<td>Film</td>
-					<td>Year</td>
-				</tr>
+			
+			
+			<table id="myTable">
+				<thead id="tableHead">
+					<tr>
+						<th>Film</th>
+						<th>Year</th>
+					</tr>
+				</thead>
+				
+				<tbody id="tableBody">
+				</tbody>
+				
 			</table>
+			
 		</div>
 		
 		<div id="module-2">
+			
 			<form id="myForm">
+				
 				Film:<br>
-				<input type="text" name="film"><br>
+				<input id="filmTitle" type="text" name="film"><br>
 				Year:<br>
-				<input type="text" name="year"><br>
-				<input type="button" onclick="submitData()" value="submit">
+				<input id="filmYear" type="text" name="year"><br>
+				<input type="button" value="submit" onclick="submitData()">
+				
 			</form>
+			
 		</div>
+		
+		<script src="js/main.js"></script>
 	
 	</body>
-	
-	<script src="js/main.js"></script>
 
 </html>
