@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"/>
+    
+    <!-- IE Edge Meta Tag -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>WEEK 3 | Numbers &amp; Strings</title>
+    
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">  
+   
+		<!-- CSS & Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic,500,500italic,100' rel='stylesheet' type='text/css'>
+		
+    <link rel="stylesheet" href="css/stylesheet.css">
+ 
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+  </head>
+  
+  <body>
+		
+		<div id="color-overlay"></div>
+		<div id="container">
+			
+			<div id="title">
+				<h1>Week 3 Assignment</h1>
+				<h2>Numbers &amp; Strings</h2>
+			</div>
+
+			<div id="form">
+				<div id="form-box">
+					<h3>Type anything!</h3>
+			
+						<input type="text" id="userInput" placeholder="Type anything you want!">
+						<input type="submit" onclick="addNumber()" value="Submit">
+						<input type="button" onclick="resetForm()" value="Reset" class="reset">
+						<p id="error"></p>
+
+				</div>
+			</div>
+
+			<div id="results-container">
+				<div id="results-box">
+					<h3>Your results</h3>
+					<ul>
+						<div id="results">
+							<li>Total Numbers: <span id="total"></span></li>
+							<li>Sum of Numbers: <span id="sum"></span></li>
+							<li>Highest Number: <span id="max"></span></li>
+							<li>Average: <span id="avg"></span></li>
+						</div>
+					</ul>
+					
+					<ul>
+						<li>Number of strings entered: <span id="totalStrings"></span></li>
+						<li>Concatenated strings: <span id="sumStrings"></span></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+			<script src="js/main.js"></script>
+	</body>
+	
+</html>
