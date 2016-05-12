@@ -36,29 +36,29 @@
 			<tr>
 				<td>input type="checkbox"</td>
 				<td>
-					<input type="checkbox">
+					<input id="checkboxIcon" type="checkbox" onclick="checkboxIcon()">
 				</td>
 				<td>
-					<p id="checkbox"></p>
+					<p id="checkbox-text">False</p>
 				</td>
 			</tr>
 			
 			<tr>
 				<td>input type="radio"</td>
 				<td>
-					<input type="radio" name="radio control" value="First"> First<br>
-					<input type="radio" name="radio control" value="Second"> Second<br>
-					<input type="radio" name="radio control" value="Third"> Third<br>
+					<input id="firstRadio" onclick="radioIcons()" type="radio" name="radio control" value="First"> First<br>
+					<input id="secondRadio" onclick="radioIcons()" type="radio" name="radio control" value="Second"> Second<br>
+					<input id="thirdRadio" onclick="radioIcons()" type="radio" name="radio control" value="Third"> Third<br>
 				</td>
 				<td>
-					<p id="rado"></p>
+					<p id="radio"></p>
 				</td>
 			</tr>
 			
 			<tr>
 				<td>input type="text"</td>
 				<td>
-					<input type="text">
+					<input id="inputText" type="text" onchange="inputText()">
 				</td>
 				<td>
 					<p id="text"></p>
@@ -68,7 +68,8 @@
 			<tr>
 				<td>text area</td>
 				<td>
-					<textarea></textarea>
+					<textarea id="textareaText"></textarea>
+					<input type="button" onclick="textareaText()" value="Submit">
 				</td>
 				<td>
 					<p id="textarea"></p>
@@ -78,14 +79,22 @@
 			<tr>
 				<td>input type="select"</td>
 				<td>
-					<select></select>
+					<select id="selectOption" onchange="selectOption()">
+						<option id="firstOption" value="First">First</option>
+						<option id="secondOption" value="Second">Second</option>
+						<option id="thirdOption" value="Third">Third</option>
+						<option id="fourthOption" value="Fourth">Fourth</option>
+						<option id="fifthOption" value="Fifth">Fifth</option>
+					</select>
 				</td>
 				<td>
-					<p id="select"></p>
+					<p id="select">First</p>
 				</td>
 			</tr>
 		
 		</table>
+		
+		<input id="clearAll" type="button" value="Clear All" onclick="clearAll()">
 		
 		
 			<script src="js/main.js"></script>
